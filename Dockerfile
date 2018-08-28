@@ -1,5 +1,5 @@
 ARG APP_PORT
-FROM python:2.7-alpine
+FROM python:2.7-jessie
 
 WORKDIR /usr/src/app
 COPY requirements.txt ./
