@@ -6,11 +6,13 @@
 - Fill in URL of simple weather service api
 - Run this program
 
-# Input JSON 
-- BJtech platform will send this JSO to your api gateway
+# JSON Request 
+- BJtech platform will send this JSON to your api gateway
 - For example your chatbot send Latitude and Longitude to get weather of specific location:
 
   {'type': '?', 'replyToken': '?', 'msisdn': '?', 'data': {'lat': '101.1', 'long': '96.1'}}
+
+# JSON Response
 
 - Your api gateway must be response with following JSON:
   
@@ -26,7 +28,7 @@
      X: {'url': ''}
 
   5. Response CAROUSEL: {'replyToken': '', msisdn: '', 'outputtype': 'carousel', 'data': {X}}
-     X: {[ {'title': '', 'desc': '', 'url': '', 'buttons': [{'type': 'URI', 'label': '', 'data': ''}]}, {'title': '', 'desc': '', 'url': '', 'buttons': [{'type': 'URI', 'label':
+     X: {[ {'title': '', 'desc': '', 'url': '', 'buttons': [{'type': 'URI', 'label': '', 'data': ''}]}, {'title': '', 'desc': '', 'url': '', 'buttons': [{'type': 'URI', 'label': '', 'data': ''}]}, ..  ]}
 
   6. Response ERROR: {'outputtype': 'error', 'data': 'Lokasi kamu gak bisa aku cek kak, coba lokasi yg lain ya'}
 
