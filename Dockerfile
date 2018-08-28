@@ -1,10 +1,8 @@
 ARG APP_PORT
-FROM python:2.7-jessie
+FROM python:2.7-alpine
 
 WORKDIR /usr/src/app
 COPY requirements.txt ./
-
-RUN apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoclean
 
 RUN pip install -r requirements.txt
 COPY . .
