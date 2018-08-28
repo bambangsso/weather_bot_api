@@ -17,8 +17,10 @@
 - Your api gateway must be response with following JSON:
   
   1. Response BUTTON: 
+     ```js
      {'replyToken': '', msisdn: '', 'outputtype': 'button', 'data': {X}} <br/>
      X: {'title': '', 'desc': '', 'url': '', 'keywords': [{'type': 'URI', 'label': '', 'data': ''}, .. ]}
+     ```
 
   2. Response TEXT: 
      {'replyToken': '', msisdn: '', 'outputtype': 'text', 'data': {X}} <br/>
