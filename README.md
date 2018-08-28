@@ -6,11 +6,15 @@
 - Fill in URL of simple weather service api
 - Run this program
 
+<img src="Add-API-Menu.png" alt="BJtech bot platform builder"/>
+
 # JSON Request 
 - BJtech platform will send this JSON to your api gateway
 - For example your chatbot send Latitude and Longitude to get weather of specific location:
 
+  ```js
   {'type': '?', 'replyToken': '?', 'msisdn': '?', 'data': {'lat': '101.1', 'long': '96.1'}}
+  ```
 
 # JSON Response
 
