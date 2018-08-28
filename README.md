@@ -17,17 +17,17 @@
 - Your api gateway must be response with following JSON:
   
   1. Response BUTTON: 
-     {'replyToken': '', msisdn: '', 'outputtype': 'button', 'data': {X}}
+     {'replyToken': '', msisdn: '', 'outputtype': 'button', 'data': {X}} <br/>
      X: {'title': '', 'desc': '', 'url': '', 'keywords': [{'type': 'URI', 'label': '', 'data': ''}, .. ]}
 
   2. Response TEXT: 
-     {'replyToken': '', msisdn: '', 'outputtype': 'text', 'data': {X}}
+     {'replyToken': '', msisdn: '', 'outputtype': 'text', 'data': {X}} <br/>
      X: {'text1': '?', 'text2': '?', 'text3': '?'}
 
-  4. Response IMAGE: {'replyToken': '', msisdn: '', 'outputtype': 'image', 'data': {X}}
+  4. Response IMAGE: {'replyToken': '', msisdn: '', 'outputtype': 'image', 'data': {X}} <br/>
      X: {'url': ''}
 
-  5. Response CAROUSEL: {'replyToken': '', msisdn: '', 'outputtype': 'carousel', 'data': {X}}
+  5. Response CAROUSEL: {'replyToken': '', msisdn: '', 'outputtype': 'carousel', 'data': {X}} <br/>
      X: {[ {'title': '', 'desc': '', 'url': '', 'buttons': [{'type': 'URI', 'label': '', 'data': ''}]}, {'title': '', 'desc': '', 'url': '', 'buttons': [{'type': 'URI', 'label': '', 'data': ''}]}, ..  ]}
 
   6. Response ERROR: {'outputtype': 'error', 'data': 'Lokasi kamu gak bisa aku cek kak, coba lokasi yg lain ya'}
