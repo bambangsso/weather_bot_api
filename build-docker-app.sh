@@ -21,7 +21,7 @@ if [[ $APP_PORT = *[[:digit:]]* ]]; then
 
    sudo docker build --build-arg APP_PORT=$APP_PORT -t $DOCKER_REPO_NAME .
    sleep 5
-   sudo docker run -d -p $APP_PORT:$APP_PORT $DOCKER_REPO_NAME --name $DOCKER_REPO_NAME
+   sudo docker run -d -p $APP_PORT:$APP_PORT --name $DOCKER_REPO_NAME $DOCKER_REPO_NAME
    sleep 5
 else
    echo "Application port is not found, you need to define on the Conf.Staging.json file. Docker build terminated"

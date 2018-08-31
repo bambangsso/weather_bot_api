@@ -37,7 +37,7 @@ pipeline {
      always {
         echo 'Sending email & telegram of SUCCESS or FAILED status'
 
-        sh "curl -i -X GET 'https://api.telegram.org/bot663264986:AAH2cQ8bgVdkslwG9jGwEAmJZ2nt--baO4A/sendMessage?chat_id=-253752452&text=Hi%20BJtech%20tim,%20DevOps%20BangJoni%20infoin%20ada%20proses%20integrasi%20dan%20deployement%20task%20${env.JOB_NAME}%20dgn%20status%20${currentBuild.currentResult}.%20Untuk%20keterangan%20lebih%20jelas%20kunjungi%20${env.BUILD_URL}'"
+        sh "curl -i -X GET 'https://api.telegram.org/bot663264986:AAH2cQ8bgVdkslwG9jGwEAmJZ2nt--baO4A/sendMessage?chat_id=-253752452&text=Hi%20BJtech%20tim,%20DevOps%20BangJoni%20infoin%20ada%20proses%20integration%20dan%20deployment%20task%20${env.JOB_NAME}%20dgn%20status%20${currentBuild.currentResult}.%20Untuk%20keterangan%20lebih%20jelas%20kunjungi%20${env.BUILD_URL}'"
             
         emailext body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}",
            recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
