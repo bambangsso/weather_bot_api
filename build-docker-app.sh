@@ -4,6 +4,7 @@ if [ $# -ne 1 ]; then
 fi
 
 DOCKER_REPO_NAME=`echo $1 | awk '{print tolower($0)}'`
+DOCKER_CONT_NAME=$DOCKER_REPO_NAME"_c"
 APP_PORT=`grep App_Port Conf.Staging.json | awk -F':' '{print $2}'`
 
 APP_PORT=`echo $APP_PORT | sed 's/[^0-9]*//g'`
@@ -21,7 +22,7 @@ if [[ $APP_PORT = *[[:digit:]]* ]]; then
 
    sudo docker build --build-arg APP_PORT=$APP_PORT -t $DOCKER_REPO_NAME .
    sleep 5
-   sudo docker run -d -p $APP_PORT:$APP_PORT --name $DOCKER_REPO_NAME $DOCKER_REPO_NAME
+   sudo docker run -d -p $APP_PORT:$APP_PORT --name $DOCKER_CONT_NAME $DOCKER_REPO_NAME
    sleep 5
 else
    echo "Application port is not found, you need to define on the Conf.Staging.json file. Docker build terminated"
