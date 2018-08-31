@@ -17,6 +17,8 @@ if [[ $APP_PORT = *[[:digit:]]* ]]; then
    if [ ${#CONTAINER_ID} -gt 0 ]; then
       echo "$DOCKER_REPO_NAME is running with container id: $CONTAINER_ID, shut it down"
       sudo docker kill $CONTAINER_ID
+      sleep 2
+      sudo docker rm $CONTAINER_ID
    fi
    sleep 5
 
